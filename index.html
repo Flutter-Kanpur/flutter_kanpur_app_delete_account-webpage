@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion Request - Flutter Kanpur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #37ABFF;
+            padding-bottom: 10px;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .steps {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .data-types {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .email-link {
+            color: #37ABFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #37ABFF;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #2a8bcc;
+        }
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: none;
+        }
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Account Deletion Request - Flutter Kanpur</h1>
+        
+        <p>If you would like to delete your Flutter Kanpur account and associated data, please follow the steps below:</p>
+        
+        <div class="steps">
+            <h2>Steps to Request Account Deletion:</h2>
+            <ol>
+                <li><strong>Send an Email:</strong> Email us at <a href="mailto:privacy@flutterkanpur.com" class="email-link">privacy@flutterkanpur.com</a> with the subject "Account Deletion Request"</li>
+                <li><strong>Include Your Information:</strong> In your email, please include:
+                    <ul>
+                        <li>Your registered email address</li>
+                        <li>Your full name</li>
+                        <li>Confirmation that you want to delete your account</li>
+                    </ul>
+                </li>
+                <li><strong>Verification:</strong> We will verify your identity and process your request within 7 business days</li>
+                <li><strong>Confirmation:</strong> You will receive a confirmation email once your account has been deleted</li>
+            </ol>
+        </div>
+        
+        <form id="deletionForm">
+            <h2>Or Use This Form:</h2>
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Additional Information (Optional)</label>
+                <textarea id="message" name="message" placeholder="Please provide any additional information about your account or reason for deletion..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="confirm" required>
+                    I confirm that I want to permanently delete my Flutter Kanpur account and all associated data. *
+                </label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Deletion Request</button>
+        </form>
+        
+        <div id="successMessage" class="success-message">
+            <strong>Request Submitted Successfully!</strong><br>
+            We have received your account deletion request. We will process it within 7 business days and send you a confirmation email.
+        </div>
+        
+        <div id="errorMessage" class="error-message">
+            <strong>Error:</strong> <span id="errorText"></span>
+        </div>
+        
+        <div class="data-types">
+            <h2>Data That Will Be Deleted:</h2>
+            <ul>
+                <li>User account information (name, email, profile data)</li>
+                <li>Forum posts and comments</li>
+                <li>Question submissions and answers</li>
+                <li>Event registrations and participation history</li>
+                <li>Community interactions and posts</li>
+                <li>App usage data and preferences</li>
+            </ul>
+            
+            <h2>Data That May Be Retained:</h2>
+            <ul>
+                <li>Anonymous usage analytics (no personal identifiers)</li>
+                <li>Legal compliance records (if required by law)</li>
+                <li>Backup data (automatically deleted within 30 days)</li>
+            </ul>
+        </div>
+        
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> <a href="mailto:privacy@flutterkanpur.com" class="email-link">privacy@flutterkanpur.com</a></p>
+            <p><strong>Response Time:</strong> We will respond to your request within 7 business days</p>
+            <p><strong>Processing Time:</strong> Account deletion will be completed within 30 days of verification</p>
+        </div>
+        
+        <p><em>Last updated: January 2025</em></p>
+    </div>
+
+    <script>
+        document.getElementById('deletionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const confirm = document.getElementById('confirm').checked;
+            
+            if (!name || !email || !confirm) {
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('errorText').textContent = 'Please fill in all required fields and confirm your request.';
+                document.getElementById('successMessage').style.display = 'none';
+                return;
+            }
+            
+            // Create email link
+            const subject = 'Account Deletion Request - Flutter Kanpur';
+            const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}\n\nI confirm that I want to permanently delete my Flutter Kanpur account and all associated data.`;
+            const mailtoLink = `mailto:privacy@flutterkanpur.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('errorMessage').style.display = 'none';
+            this.reset();
+        });
+    </script>
+</body>
+</html>
